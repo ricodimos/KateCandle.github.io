@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+</head>
+<body>
+    <p id="up"></p>
+    <h1>Αποστολή Δεδομένων</h1>
+   <form action="/sendData" method="post">
+    <label for="txtFirstnName"> Όνομα:</label>
+    <input type="text" id="txtFirstnName" name="FirstName" minlength="3" maxlength="30" placeholder="Π.χ Νικόδημος.." required>
+    <br>
+    <label for="txtLastName">Επώνυμο:</label>
+    <input type="text" id="txtLastName" name="Lastname" minlength="3" maxlength="30" placeholder="Π.χ Ηλιάδης.." required>
+    <br>
+    <label for="txtComments">Σχόλια:</label>
+   <textarea id="txtComments" name="Comments" id="" cols="30" rows="10" placeholder="Τα σχόλιά σας"></textarea>
+    <br>
+    <input type="submit" value="Αποστολή">
+    <input type="reset" value="Καθαρισμός">
+
+   </form>
+   <h2>Login</h2>
+   <form action="/sendData" method="post">
+    <label for="txtUsername">Username</label>
+    <input type="text" id="txtUsername" name="Username" maxlength="30" placeholder="Enter your Username.." autocomplete="on" required>
+    <br>
+    <label for="txtPassword">Password</label>
+    <input type="password" id="txtPassword" name="Password" maxlength="30" placeholder="Enter your Password.."autocomplete="on" pattern="[0-9a-zA-Z]{4,10}" required>
+    <br>
+    <input type="submit" value="submit">
+    <input type="reset" value="reset">
+   </form>
+   <h3>Email-Tel</h3>
+   <form action="/sendData" method="post">
+    <label for="txtFirstnName&Lastname">Ονοματεπώνυμο </label>
+    <input type="text"  id="txtFirstnName&Lastname" name="FirstnName&Lastname" maxlength="30" min="3" placeholder="Π.χ Νικόδημος Ηλιάδης" autocomplete="on" required> (*)
+    <br>
+    <label for="txtE-mail">E-mail</label>
+    <input type="email" id="txtE-mail" name="email" required> (*)
+    <br>
+    <label for="txtTel">Τηλέφωνο</label>
+    <input type="tel" id="txtTel" name="phone">
+    <br>
+    (*) Τα πεδία είναι υποχρεωτικά
+    <input type="submit" value="Αποστολή">
+    <input type="reset" value="Καθαρισμός">
+   </form>
+<h1>Ημερομηνία/Ώρα</h1>
+<form action="/sendData" method="get"
+<label for="txtData">Ημερομηνία</label>
+<input type="data" id="txtData" name="date" min="2023-01-01" max="2023-12-31" value="2023-02-15" required> 
+(*)
+<br>
+<label for="txtHour">Ώρα</label>
+<input type="time" id="txtHour" name="hour" required>
+(*)
+<br>
+<label for="txtDateTime">Ημερομηνία/Ώρα</label>
+<input type="datetime-local" id="txtDateTime" name="datetime" required>
+<br>
+(*) Τα πεδία είναι υποχρεωτικά
+<input type="submit" value="Αποστολή">
+<input type="reset" value="Καθαρισμός">
+</form>
+<form action="/sendData" method="post" enctype="multipart/form-data">
+<label for="txtSearch">Αναζήτηση</label>
+<input type="search" id="txtSearch" name="search_term">
+<br>
+<label for="fc">Επιλογή αρχείου</label>
+<input type="file" id="fc" name="file">
+<br>
+<label for="cl">Χρώμα</label>
+<input type="color" id="cl" name="color">
+<br>
+<input type="hidden" name="hidden" value="someValue">
+<br>
+<input type="submit" value="Αποστολή">
+<input type="reset" value="Καθαρισμός">
+</form>
+<h3>Επιλογή</h3>
+<form action="/sendData" method="post">
+<label for="ckMailList">Join mailing list</label>
+<input type="checkbox" id="ckMailList" name="ckMailList" value="mail-0n" checked>
+<br>
+<label for="chOpt1">Opt1</label>
+<input type="checkbox" id="chOpt1" name="chOpt1" value="opt1-on">
+<br>
+<label for="chOpt2">Opt2</label>
+<input type="checkbox" id="chOpt2" name="chOpt2">
+<br>
+<label for="chAccept">Accept Everything</label>
+<input type="checkbox" id="chAccept" name="chAccept" indeterminate>
+<br>
+<input type="submit" value="Αποστολή">
+<input type="reset" value="Καθαρισμός">
+</form>
+<h3>Επιλέξτε Δώρο</h3>
+<form action="/sendData" method="get">
+<label for="rdKoutali">Γλυκό του Κουταλιού</label>
+<input type="radio" id="rdKoutali" name="gift" value="koutali" checked>
+<br>4
+<label for="rdMilfeulle">Μιλφέιγ</label>
+<input type="radio" id="rdMilfeulle" name="gift" value="Milfeulle">
+<br>
+Τρόπος Χρέωσης:
+<br>
+<label for="rdCard" Χρεωστική Κάρτα></label>
+<input type="radio" id="rdCard" name="payment" value="Card">
+<br>
+<label for="rdCash">Μετρητά</label>
+<input type="radio" id="rdCash" name="payment" value="Cash">
+<br>
+<input type="submit" value="Αποστολή">
+<input type="reset" value="Καθαρισμός">
+</form>
+<h2>Μενού επιλογής</h2>
+<form action="/sendData" method="get">
+<label for="sIPayment">Τρόπος Χρέωσης</label>
+<select name="payment" id="sIPayment">
+<option value="visa" selected>Visa</option>
+<option value="MasterCard" selected>MasterCard</option>
+<option value="Cash" selected>Cash</option>
+</select>
+</form>
+<form action="sIDest" method="get">
+<select name="destination" id="sIDest" multiple size="4">
+<optgroup label="Europe">
+    <option value="Spain" selected>Spain</option>
+    <option value="Italy">Italy</option>
+    <option value="Greece">Greece</option>
+</optgroup>
+</select>
+<br>
+<input type="submit" value="Αποστολή">
+<input type="reset" value="Καθαρισμός">
+</form>
+<p> <button> <a href="#up">up</button> </a> </p>
+
+</body>
+</html>
